@@ -18,11 +18,11 @@ kserh.deck.prototype.shuffle = function() {
     var steps = Math.floor(Math.random() * 60) + 50;
     for (var s = 0; s < steps; s++) {
         var index_a = Math.floor(Math.random() * 51);
-        var index_b = Math.floor(Math.random() * 51);
+        var index_b; 
 
-        while (index_b == index_a) {
+        do{
             index_b = Math.floor(Math.random() * 51);
-        }
+        } while (index_b == index_a) {
         var temp = this.cards[index_a];
         this.cards[index_a] = this.cards[index_b];
         this.cards[index_b] = temp;
