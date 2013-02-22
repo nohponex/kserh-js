@@ -30,7 +30,7 @@ kserh.ranks_chars = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q"
 kserh.card = function(suit, rank) {
     this.suit = suit;
     this.rank = rank;
-}
+};
 
 kserh.card.prototype.toString = function() {
     return this.suit + "|" + this.rank;
@@ -42,7 +42,7 @@ kserh.card.prototype.points = function() {
         points += 1;
     }
     // TO FIX
-    if (this.rank == kserh.ranks.ten && c.suit == kserh.suits.diamonds) {
+    if (this.rank == kserh.ranks.ten && this.suit == kserh.suits.diamonds) {
         points += 1;
     } else if (this.rank == kserh.ranks.two && this.suit == kserh.suits.clubs) {
         points += 1;
